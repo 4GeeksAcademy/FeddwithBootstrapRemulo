@@ -1,207 +1,216 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/8ef0e087d0.js" crossorigin="anonymous"></script>
-    <title>Instagram Photo Feed with Boostrap</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/8ef0e087d0.js" crossorigin="anonymous"></script>
+  <title>Instagram Photo Feed with Boostrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav class="navbar bg-body-tertiary">
-      <div class="container">
-        <div class="me-auto">
-          <i class="fa-brands fa-instagram fs-5"></i>
-          <a class="navbar-brand">Instagram</a>
-        </div>
-        <div class="d-flex flex-row mb-2" >
-          <!--Boton llamada modal-->
-          <button class="btn btn-success h-75 ms-auto mt-1 me-2 " data-bs-toggle="modal" data-bs-target="#createPost">Create a new post</button>
-          <!--Modal create post-->
-          <div class="modal fade" id="createPost" tabindex="-1" aria-labelledby="createPostLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <h6>Caption:</h6>
-                          <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" ></textarea>
-                            <label for="floatingTselect" placeholder="Add the caption of your post here">Add the caption of your post here</label>
-                          </div>
-                          <button class="btn btn-ligth me-auto border mt-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-camera"></i>
-                        </button>
-                        <button class="btn btn-ligth me-auto border mt-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </button>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-success">Publish</button>
-                        </div>
-                      </div>
-                    </div>
-        </div>
-                <!-- Dropdown menu-->
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle h-auto ms-2 mt-1 me-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-gear text-ligth"></i>
-                    </button>
-                    <ul class="dropdown-menu me-auto">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
-                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
-                    </ul>
-                </div>                                  
-            </div>
-        </div>
-      </nav>
-
-      <!--Galería cuadricula-single-->
-      <div class="d-flex justify-content-center">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <!-- boton cuadrícula-->
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="grid-btn" data-bs-toggle="tab" data-bs-target="#grid3" type="button" role="tab" aria-controls="grid3" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
-          </li>
-          <!--boton single -->
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="carousel-btn" data-bs-toggle="tab" data-bs-target="#grid1" type="button" role="tab" aria-controls="grid1" aria-selected="false"><i class="fa-solid fa-square"></i></button>
-          </li>
-        </ul>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container">
+      <div class="me-auto">
+        <i class="fa-brands fa-instagram fs-5"></i>
+        <a class="navbar-brand">Instagram</a>
       </div>
-         <!-- contenido Cuadríula -->
-         <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="grid3" role="tabpanel" aria-labelledby="grid3-tab">
-            <div class="container-fluid"> 
-            <div class=" row g-1 m-1">
-              <!-- Fotos en Cuadrícula-->
-                           
-                  <div class="col-4">
-                      <img class="img-thumbnail" style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/102/420">
-                  </div>
-                  <div class="col-4">
-                      <img class="img-thumbnail " style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/50/420">
-                  </div>
-                  <div class="col-4">
-                      <img class="img-thumbnail " style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/400/420">
-                  </div>
-                                                
-                  <div class="col-4">
-                      <img class="img-thumbnail" style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/20/420">
-                  </div>
-                  <div class="col-4 ">
-                      <img class="img-thumbnail " style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/35/420">
-                  </div>
-                  <div class="col-4 ">
-                      <img class="img-thumbnail " style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/89/420">
-                  </div>
-                                   
-                  <div class="col-4">
-                    <img class="img-thumbnail" style="object-fit: cover; width: 100%;"  src="https://picsum.photos/id/350/420">
-                  </div>
-                  <div class="col-4 ">
-                    <img class="img-thumbnail " style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/107/420">
-                  </div>
-                  <div class="col-4 ">
-                    <img class="img-thumbnail " style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/87/420">
-                  </div>
+      <div class="d-flex flex-row mb-2">
+        <!--Boton llamada modal-->
+        <button class="btn btn-success h-75 ms-auto mt-1 me-2 " data-bs-toggle="modal"
+          data-bs-target="#createPost">Create a new post</button>
+        <!--Modal create post-->
+        <div class="modal fade" id="createPost" tabindex="-1" aria-labelledby="createPostLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h6>Caption:</h6>
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
+                  <label for="floatingTselect" placeholder="Add the caption of your post here">Add the caption of your
+                    post here</label>
+                </div>
+                <button class="btn btn-ligth me-auto border mt-1" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fa-solid fa-camera"></i>
+                </button>
+                <button class="btn btn-ligth me-auto border mt-1" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fa-solid fa-location-dot"></i>
+                </button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+              </div>
             </div>
-  
           </div>
-  
-          </div>
-          </div>
+        </div>
+        <!-- Dropdown menu-->
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle h-auto ms-2 mt-1 me-5" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-gear text-ligth"></i>
+          </button>
+          <ul class="dropdown-menu me-auto">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-          <!--Contenido Single-->
-   
-          <div class="tab-pane fade" id="grid1" role="tabpanel" aria-labelledby="grid1-tab">
-          
-            <!--aqui van los post  -->
-            
-  <div class="container mt-1">
-    <!-- Foto 1 -->
-    <div class="row">
-      <div class="d-flex align-items-center justify-content-center " style="min-height: 100vh;">
-        <div class="col-lg-5 col-md-6 col-sm-12">
-          <div class="card border  mx-auto mb-3" >
+  <!--Galería cuadricula-single-->
+  <div class="d-flex justify-content-center">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <!-- boton cuadrícula-->
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="grid-btn" data-bs-toggle="tab" data-bs-target="#grid3" type="button"
+          role="tab" aria-controls="grid3" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+      </li>
+      <!--boton single -->
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="carousel-btn" data-bs-toggle="tab" data-bs-target="#grid1" type="button" role="tab"
+          aria-controls="grid1" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+      </li>
+    </ul>
+  </div>
+  <!-- contenido Cuadríula -->
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="grid3" role="tabpanel" aria-labelledby="grid3-tab">
+      <div class="container-fluid">
+        <div class=" row g-1 m-1">
+          <!-- Fotos en Cuadrícula-->
+          <div class="col-4">
+            <img class="img-thumbnail" style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/102/420">
+          </div>
+          <div class="col-4">
+            <img class="img-thumbnail " style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/50/420">
+          </div>
+          <div class="col-4">
+            <img class="img-thumbnail " style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/400/420">
+          </div>
+          <div class="col-4">
+            <img class="img-thumbnail" style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/20/420">
+          </div>
+          <div class="col-4 ">
+            <img class="img-thumbnail " style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/35/420">
+          </div>
+          <div class="col-4 ">
+            <img class="img-thumbnail " style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/89/420">
+          </div>
+          <div class="col-4">
+            <img class="img-thumbnail" style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/350/420">
+          </div>
+          <div class="col-4 ">
+            <img class="img-thumbnail " style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/107/420">
+          </div>
+          <div class="col-4 ">
+            <img class="img-thumbnail " style="object-fit: cover; width: 100%;" src="https://picsum.photos/id/87/420">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Contenido Single-->
+
+  <div class="tab-pane fade" id="grid1" role="tabpanel" aria-labelledby="grid1-tab">
+    <div class="container mt-1">
+      <!-- Foto 1 -->
+      <div class="row">
+        <div class="d-flex align-items-center justify-content-center " style="min-height: 100vh;">
+          <div class="col-lg-8 col-md-6 col-sm-3">
+            <div class="card border  mx-auto mb-3">
 
               <div class="card-header bg-white d-flex">
                 <h4>Crazy Developer</h4>
                 <p class="card-text" style="margin-left: auto; color: darkgray;">08/26</p>
               </div>
               <div class="ratio ratio-1x1">
-                  <img src="https://picsum.photos/id/1/500/700" style="object-fit: cover; width: 100%;">
+                <img src="https://picsum.photos/id/1/500/700" style="object-fit: cover; width: 100%;">
               </div>
               <div class="card-body">
                 <h6>10.000 Likes</h6>
-                <p class="card-text m-1">Pues sí la verdad es un desarrollador, o quizas no. Quizas es otra foto de un simple tio y su portati aunque la mesa mola que si? jeje bueno en fin excelente día y que Dios les bendiga.</p>
+                <p class="card-text m-1">Pues sí la verdad es un desarrollador, o quizas no. Quizas es otra foto de un
+                  simple tio y su portati aunque la mesa mola que si? jeje bueno en fin excelente día y que Dios les
+                  bendiga.</p>
               </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Foto 2 -->
+      <div class="row">
+        <div class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+          <div class="col-lg-8 col-md-6 col-sm-3">
+            <div class="card border  mx-auto mb-3">
+
+              <div class="card-header bg-white d-flex">
+                <h4>Crazy Waves</h4>
+                <p class="card-text" style="margin-left: auto; color: darkgray;">04/09</p>
+              </div>
+              <div class="ratio ratio-1x1">
+                <img src="https://picsum.photos/id/27/500/700" class=" " style="object-fit: cover; width: 100%;">
+              </div>
+              <div class="card-body">
+                <h6>20.000 Likes</h6>
+                <p class="card-text">Pues si la verdad son olas locas o quizas simplemente es una foto del mar.</p>
               </div>
 
-            </div>     
+            </div>
           </div>
         </div>
-        <!-- Foto 2 -->
-        <div class="row">
-          <div class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
-            <div class="col-lg-5 col-md-6 col-sm-12">
-              <div class="card border  mx-auto mb-3" >
-                
-                <div class="card-header bg-white d-flex">
-                  <h4>Crazy Waves</h4>
-                  <p class="card-text" style="margin-left: auto; color: darkgray;">04/09</p>
-                </div>
-                <div class="ratio ratio-1x1">
-                  <img src="https://picsum.photos/id/27/500/700" class=" " style="object-fit: cover; width: 100%;">
-                </div>
-                <div class="card-body">
-                  <h6>20.000 Likes</h6>
-                  <p class="card-text">Pues si la verdad son olas locas o quizas simplemente es una foto del mar.</p>
-                </div>
-                
-              </div>
-            </div>     
-          </div>
-        </div>
-        
-        <!-- Foto3 -->
-        <div class="row">
-          <div class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
-            <div class="col-lg-5 col-md-6 col-sm-12">
-              <div class="card border  mx-auto mb-3" >
-                
-                <div class="card-header bg-white d-flex">
-                  <h4>Train Tracks</h4>
+      </div>
+
+      <!-- Foto3 -->
+      <div class="row">
+        <div class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+          <div class="col-lg-8 col-md-6 col-sm-3">
+            <div class="card border  mx-auto mb-3">
+
+              <div class="card-header bg-white d-flex">
+                <h4>Train Tracks</h4>
                 <p class="card-text" style="margin-left: auto; color: darkgray;">06/10</p>
               </div>
               <div class="ratio ratio-1x1">
-                  <img src="https://picsum.photos/id/155/500/700" class=" " style="object-fit: cover; width: 100%;">
+                <img src="https://picsum.photos/id/155/500/700" class=" " style="object-fit: cover; width: 100%;">
               </div>
               <div class="card-body">
                 <h6>1.000 Likes</h6>
                 <p class="card-text">Pues sí las vias de un tren al desierto, buen dia Dios les bendiga.</p>
               </div>
 
+            </div>
           </div>
-        </div>     
+        </div>
       </div>
+
     </div>
-
-     </div>
-      </div>
   </div>
-      
+  </div>
 
-      
-    
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <!--aqui van los post  -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
